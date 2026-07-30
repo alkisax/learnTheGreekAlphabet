@@ -33,12 +33,6 @@ const exercises: Exercise[] = [
     meaning: "Ten",
   },
   {
-    uppercase: "ΖΕΡΟ",
-    lowercase: "ζέρο",
-    answer: "ZEro",
-    meaning: "Zero",
-  },
-  {
     uppercase: "ΓΑΛΑ",
     lowercase: "γάλα",
     answer: "GAla",

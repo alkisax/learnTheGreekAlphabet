@@ -50,12 +50,6 @@ const exercises: Exercise[] = [
     answer: "koroiDEvo",
     meaning: "I tease or deceive",
   },
-  {
-    uppercase: "ΑΫΠΝΟΣ",
-    lowercase: "άυπνος",
-    answer: "Aipnos",
-    meaning: "Sleepless",
-  },
 ]
 
 const Lesson17Exercises = () => {
