@@ -1,5 +1,7 @@
+// webLearnTheGreekAlphabet\src\layout\Layout.tsx
 import { Outlet } from 'react-router-dom'
 import Navbar from '../components/layoutComponents/Navbar'
+import MockAdBanner from '../components/ads/MockAdBanner'
 
 const Layout = () => {
   return (
@@ -14,7 +16,11 @@ const Layout = () => {
       <Navbar />
 
       {/* εδώ θα μπαίνουν όλες οι σελίδες */}
-      <Outlet />
+      <div className="flex-1">
+        <Outlet />
+      </div>
+
+      <MockAdBanner />
     </div>
   )
 }
