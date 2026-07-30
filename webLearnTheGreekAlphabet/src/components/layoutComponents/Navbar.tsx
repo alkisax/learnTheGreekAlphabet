@@ -3,16 +3,20 @@ import heroImage from "../../assets/heroImage.png"
 
 const Navbar = () => {
   const linkClass = ({ isActive }: { isActive: boolean }) =>
-  isActive
-    ? "font-bold text-blue-600"
-    : "text-black hover:text-blue-600"
-    
+    isActive
+      ? "font-bold text-blue-600"
+      : "text-black hover:text-blue-600"
+
   return (
     <header>
       <img
         src={heroImage}
         alt="Learn the Greek Alphabet"
+        title="Learn the Greek Alphabet"
         className="w-full h-60 object-cover"
+        width={1717}
+        height={916}
+        loading="eager"
       />
 
       <nav className="bg-white pb-10">
