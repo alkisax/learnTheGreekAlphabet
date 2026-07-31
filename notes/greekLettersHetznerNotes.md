@@ -77,6 +77,39 @@ nslookup learngreekalphabet.gr
 Αποτέλεσμα:
 learngreekalphabet.gr → 49.12.76.128
 
+```bash
+nano /etc/nginx/sites-available/learngreekalphabet.gr
+cat /etc/nginx/sites-available/learngreekalphabet.gr
+
+ln -s /etc/nginx/sites-available/learngreekalphabet.gr /etc/nginx/sites-enabled/
+nginx -t
+
+systemctl reload nginx
+
+curl -I http://learngreekalphabet.gr
+curl -I http://www.learngreekalphabet.gr
+
+certbot --nginx -d learngreekalphabet.gr -d www.learngreekalphabet.gr
+
+curl -I https://learngreekalphabet.gr
+curl -I https://www.learngreekalphabet.gr
+curl -I https://learngreekalphabet.gr/learn/lesson-5
+```
+
+```nginx
+server {
+    listen 80;
+    server_name learngreekalphabet.gr www.learngreekalphabet.gr;
+
+    root /var/www/learnTheGreekAlphabet/webLearnTheGreekAlphabet/dist;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}
+```
+
 ## one line deploy
 ssh root@49.12.76.128 
 ```bash
@@ -88,5 +121,6 @@ cd /var/www/learnTheGreekAlphabet \
 && nginx -t \
 && systemctl reload nginx \
 && echo "✓ Learn Greek Alphabet deploy OK" \
-&& curl -I https://learngreekletters.portfolio-projects.space 
+&& curl -I https://learngreekletters.portfolio-projects.space \
+&& curl -I https://learngreekalphabet.gr
 ```
