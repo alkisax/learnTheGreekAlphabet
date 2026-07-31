@@ -49,7 +49,8 @@ systemctl reload nginx
 curl -I https://learngreekletters.portfolio-projects.space
 ```
 
-## one line deploy 
+## one line deploy
+ssh root@49.12.76.128 
 ```bash
 cd /var/www/learnTheGreekAlphabet \
 && git pull origin main \
