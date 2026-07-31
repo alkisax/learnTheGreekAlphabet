@@ -50,7 +50,32 @@ curl -I https://learngreekletters.portfolio-projects.space
 ```
 
 ## προσθήκη domain απο papaki
+Domain:
+learngreekalphabet.gr
 
+Hetzner server IP:
+49.12.76.128
+
+DNS records:
+
+A
+Name: learngreekalphabet.gr
+Value: 49.12.76.128
+TTL: 1 hour
+
+CNAME
+Name: www.learngreekalphabet.gr
+Value: learngreekalphabet.gr.
+TTL: 1 hour
+
+Δεν πειράξαμε:
+MX, TXT, SRV, NS, SOA, autodiscover, autoconfig, imap
+
+Έλεγχος:
+nslookup learngreekalphabet.gr
+
+Αποτέλεσμα:
+learngreekalphabet.gr → 49.12.76.128
 
 ## one line deploy
 ssh root@49.12.76.128 
