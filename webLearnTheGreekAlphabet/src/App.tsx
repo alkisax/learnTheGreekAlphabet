@@ -21,6 +21,8 @@ import Lesson14 from "./pages/lessons/Lesson14";
 import Lesson15 from "./pages/lessons/Lesson15";
 import Lesson16 from "./pages/lessons/Lesson16";
 import Lesson17 from "./pages/lessons/Lesson17";
+import About from "./pages/About";
+import Privacy from "./pages/Privacy";
 
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/privacy" element={<Privacy />} />
         <Route path="/greek-alphabet" element={<GreekAlphabet />} />
         <Route path="/learn" element={<Learn />} >
           <Route path="lesson-1" element={<Lesson1 />} />

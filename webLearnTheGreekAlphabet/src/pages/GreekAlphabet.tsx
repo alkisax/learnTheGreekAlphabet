@@ -10,7 +10,7 @@ const GreekAlphabet = () => {
 
       <link
         rel="canonical"
-        href="https://YOUR-DOMAIN/greek-alphabet"
+        href="https://learngreekalphabet.gr/greek-alphabet"
       />
 
       <main>

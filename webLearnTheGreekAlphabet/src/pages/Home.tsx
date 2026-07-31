@@ -7,7 +7,12 @@ const Home = () => {
         name="description"
         content="Learn how to read the Modern Greek alphabet step by step, with pronunciation guides, examples and interactive exercises."
       />
-      
+
+      <link
+        rel="canonical"
+        href="https://learngreekalphabet.gr/"
+      />
+
       <main className="mx-auto max-w-3xl px-6 py-10 text-white">
         <h1 className="mb-6 text-4xl font-bold">
           Welcome! Καλώς ήρθατε!

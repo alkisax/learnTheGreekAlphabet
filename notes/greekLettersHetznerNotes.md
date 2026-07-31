@@ -49,6 +49,9 @@ systemctl reload nginx
 curl -I https://learngreekletters.portfolio-projects.space
 ```
 
+## προσθήκη domain απο papaki
+
+
 ## one line deploy
 ssh root@49.12.76.128 
 ```bash
@@ -60,6 +63,5 @@ cd /var/www/learnTheGreekAlphabet \
 && nginx -t \
 && systemctl reload nginx \
 && echo "✓ Learn Greek Alphabet deploy OK" \
-&& curl -I https://learngreekletters.portfolio-projects.space \
-&& curl -I https://learngreekletters.portfolio-projects.space/learn/lesson-5
+&& curl -I https://learngreekletters.portfolio-projects.space 
 ```

@@ -18,7 +18,7 @@ const Learn = () => {
 
       <link
         rel="canonical"
-        href="https://YOUR-DOMAIN/learn"
+        href="https://learngreekalphabet.gr/learn"
       />
 
 
