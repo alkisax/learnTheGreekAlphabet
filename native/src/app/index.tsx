@@ -9,6 +9,7 @@ import {
 
 import { ThemeContext } from '@/context/ThemeContext'
 import { createGlobalStyles } from '@/styles/global.styles'
+import SupportDeveloperAdButton from '@/ads/SupportDeveloperAdButton'
 
 const Home = () => {
   const { colors } = useContext(ThemeContext)
@@ -17,7 +18,10 @@ const Home = () => {
   return (
     <ScrollView
       style={globalStyles.screen}
-      contentContainerStyle={globalStyles.scrollContent}
+      contentContainerStyle={[
+        globalStyles.scrollContent,
+        { flexGrow: 1 }
+      ]}
       showsVerticalScrollIndicator={false}
     >
       <Text style={globalStyles.title}>
@@ -43,6 +47,10 @@ const Home = () => {
           understand the basic sounds of each letter, and begin reading simple
           Greek words and signs.
         </Text>
+      </View>
+
+      <View style={{ marginTop: 'auto' }}>
+        <SupportDeveloperAdButton />
       </View>
     </ScrollView>
   )
