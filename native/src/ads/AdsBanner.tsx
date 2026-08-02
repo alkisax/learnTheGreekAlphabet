@@ -9,8 +9,8 @@ import { View } from 'react-native'
 import { bannerAdUnitId } from '@/constants/constants'
 // import { logToServer } from '@/utils/logToServer'
 
-// const adUnitId = bannerAdUnitId
-const adUnitId = TestIds.BANNER
+const adUnitId = bannerAdUnitId
+// const adUnitId = TestIds.BANNER
 
 const AdsBanner = () => {
   return (

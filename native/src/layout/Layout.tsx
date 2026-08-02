@@ -10,7 +10,8 @@ import {
 import { Link, Slot } from 'expo-router'
 
 import Navbar from '@/layout/layoutComponents/Navbar'
-import MockAdBanner from '@/ads/MockAdBanner'
+// import MockAdBanner from '@/ads/MockAdBanner'
+import AdsBanner from '@/ads/AdsBanner'
 import { ThemeContext } from '@/context/ThemeContext'
 import { SPACING } from '@/styles/global.styles'
 
@@ -27,7 +28,8 @@ const Layout = () => {
         <Slot />
       </View>
 
-      <MockAdBanner />
+      {/* <MockAdBanner /> */}
+      <AdsBanner />
 
       <View style={styles.footer}>
         <Link href="/about" asChild>
