@@ -1,6 +1,6 @@
 import { useContext } from 'react'
+import ScreenScrollView from '@/components/ScreenScrollView'
 import {
-  ScrollView,
   Text,
   View,
   Pressable,
@@ -35,7 +35,7 @@ const Learn = () => {
   const globalStyles = createGlobalStyles(colors)
 
   return (
-    <ScrollView
+    <ScreenScrollView
       style={globalStyles.screen}
       contentContainerStyle={globalStyles.scrollContent}
       showsVerticalScrollIndicator={false}
@@ -57,7 +57,7 @@ const Learn = () => {
           </Text>
         </Pressable>
       ))}
-    </ScrollView>
+    </ScreenScrollView>
   )
 }
 

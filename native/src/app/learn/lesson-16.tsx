@@ -1,6 +1,6 @@
 import { useContext } from 'react'
+import ScreenScrollView from '@/components/ScreenScrollView'
 import {
-  ScrollView,
   StyleSheet,
   Text,
   View,
@@ -33,7 +33,7 @@ const Lesson16 = () => {
   const styles = createStyles(colors)
 
   return (
-    <ScrollView
+    <ScreenScrollView
       style={globalStyles.screen}
       contentContainerStyle={globalStyles.scrollContent}
       keyboardShouldPersistTaps="handled"
@@ -86,7 +86,7 @@ const Lesson16 = () => {
         exercises={exercises}
         hint="Use ts for τσ and tz for τζ."
       />
-    </ScrollView>
+    </ScreenScrollView>
   )
 }
 

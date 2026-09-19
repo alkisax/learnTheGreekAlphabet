@@ -1,8 +1,8 @@
 // src/app/index.tsx
 
 import { useContext } from 'react'
+import ScreenScrollView from '@/components/ScreenScrollView'
 import {
-  ScrollView,
   Text,
   View,
 } from 'react-native'
@@ -16,7 +16,7 @@ const Home = () => {
   const globalStyles = createGlobalStyles(colors)
 
   return (
-    <ScrollView
+    <ScreenScrollView
       style={globalStyles.screen}
       contentContainerStyle={[
         globalStyles.scrollContent,
@@ -52,7 +52,7 @@ const Home = () => {
       <View style={{ marginTop: 'auto' }}>
         <SupportDeveloperAdButton />
       </View>
-    </ScrollView>
+    </ScreenScrollView>
   )
 }
 

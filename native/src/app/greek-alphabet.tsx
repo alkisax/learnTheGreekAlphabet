@@ -1,8 +1,8 @@
 // src/app/greek-alphabet.tsx
 
 import { useContext } from 'react'
+import ScreenScrollView from '@/components/ScreenScrollView'
 import {
-  ScrollView,
   Text,
   View,
 } from 'react-native'
@@ -15,7 +15,7 @@ const GreekAlphabet = () => {
   const globalStyles = createGlobalStyles(colors)
 
   return (
-    <ScrollView
+    <ScreenScrollView
       style={globalStyles.screen}
       contentContainerStyle={globalStyles.scrollContent}
       showsVerticalScrollIndicator={false}
@@ -64,7 +64,7 @@ const GreekAlphabet = () => {
           boustrophedon, meaning “as the ox turns while ploughing.”
         </Text>
       </View>
-    </ScrollView>
+    </ScreenScrollView>
   )
 }
 

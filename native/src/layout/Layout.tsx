@@ -8,8 +8,8 @@ import {
   StyleSheet,
 } from 'react-native'
 import { Link, Slot } from 'expo-router'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
-import Navbar from '@/layout/layoutComponents/Navbar'
 // import MockAdBanner from '@/ads/MockAdBanner'
 import AdsBanner from '@/ads/AdsBanner'
 import { ThemeContext } from '@/context/ThemeContext'
@@ -21,9 +21,7 @@ const Layout = () => {
   const styles = createStyles(colors)
 
   return (
-    <View style={styles.container}>
-      <Navbar />
-
+    <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Slot />
       </View>
@@ -48,7 +46,7 @@ const Layout = () => {
           </Pressable>
         </Link>
       </View>
-    </View>
+    </SafeAreaView>
   )
 }
 

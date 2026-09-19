@@ -1,6 +1,6 @@
 import { useContext } from 'react'
+import ScreenScrollView from '@/components/ScreenScrollView'
 import {
-  ScrollView,
   StyleSheet,
   Text,
   View,
@@ -49,7 +49,7 @@ const Lesson1 = () => {
   const styles = createStyles(colors)
 
   return (
-    <ScrollView
+    <ScreenScrollView
       style={globalStyles.screen}
       contentContainerStyle={globalStyles.scrollContent}
       showsVerticalScrollIndicator={false}
@@ -137,7 +137,7 @@ const Lesson1 = () => {
         exercises={exercises}
         hint="Use capital letters to show the stressed syllable. For example, maMA means that the second syllable is stressed."
       />
-    </ScrollView>
+    </ScreenScrollView>
   )
 }
 

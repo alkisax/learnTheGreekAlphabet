@@ -1,8 +1,8 @@
 import { useContext } from 'react'
+import ScreenScrollView from '@/components/ScreenScrollView'
 import {
   Linking,
   Pressable,
-  ScrollView,
   Text,
   View,
 } from 'react-native'
@@ -19,7 +19,7 @@ const Privacy = () => {
   }
 
   return (
-    <ScrollView
+    <ScreenScrollView
       style={globalStyles.screen}
       contentContainerStyle={globalStyles.scrollContent}
       showsVerticalScrollIndicator={false}
@@ -107,7 +107,7 @@ const Privacy = () => {
       <Text style={globalStyles.dimText}>
         Last updated: 31 July 2026
       </Text>
-    </ScrollView>
+    </ScreenScrollView>
   )
 }
 

@@ -1,6 +1,6 @@
 import { useContext } from 'react'
+import ScreenScrollView from '@/components/ScreenScrollView'
 import {
-  ScrollView,
   StyleSheet,
   Text,
   View,
@@ -32,7 +32,7 @@ const Lesson17 = () => {
   const styles = createStyles(colors)
 
   return (
-    <ScrollView
+    <ScreenScrollView
       style={globalStyles.screen}
       contentContainerStyle={globalStyles.scrollContent}
       keyboardShouldPersistTaps="handled"
@@ -133,7 +133,7 @@ const Lesson17 = () => {
         exercises={exercises}
         hint="Read neighbouring vowels separately. Do not treat them as the usual αι, ει, οι, αυ or ευ combinations."
       />
-    </ScrollView>
+    </ScreenScrollView>
   )
 }
 

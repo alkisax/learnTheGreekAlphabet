@@ -1,6 +1,6 @@
 import { useContext } from 'react'
+import ScreenScrollView from '@/components/ScreenScrollView'
 import {
-  ScrollView,
   Text,
   View,
 } from 'react-native'
@@ -13,7 +13,7 @@ const About = () => {
   const globalStyles = createGlobalStyles(colors)
 
   return (
-    <ScrollView
+    <ScreenScrollView
       style={globalStyles.screen}
       contentContainerStyle={globalStyles.scrollContent}
       showsVerticalScrollIndicator={false}
@@ -45,7 +45,7 @@ const About = () => {
           any school, university or government organisation.
         </Text>
       </View>
-    </ScrollView>
+    </ScreenScrollView>
   )
 }
 
