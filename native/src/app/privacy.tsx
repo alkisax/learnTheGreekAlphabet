@@ -9,6 +9,7 @@ import {
 
 import { ThemeContext } from '@/context/ThemeContext'
 import { createGlobalStyles } from '@/styles/global.styles'
+import PrivacyChoicesButton from '@/components/PrivacyChoicesButton'
 
 const Privacy = () => {
   const { colors } = useContext(ThemeContext)
@@ -107,6 +108,8 @@ const Privacy = () => {
       <Text style={globalStyles.dimText}>
         Last updated: 31 July 2026
       </Text>
+
+      <PrivacyChoicesButton />
     </ScreenScrollView>
   )
 }

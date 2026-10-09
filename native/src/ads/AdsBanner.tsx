@@ -1,31 +1,35 @@
-// nativeLearnTheGreekAlphabet\src\ads\AdsBanner.tsx
+// src/ads/AdsBanner.tsx
 
+import { View } from 'react-native'
 import {
   BannerAd,
   BannerAdSize,
-  TestIds
 } from 'react-native-google-mobile-ads'
-import { View } from 'react-native'
-import { bannerAdUnitId } from '@/constants/constants'
-// import { logToServer } from '@/utils/logToServer'
 
-const adUnitId = bannerAdUnitId
-// const adUnitId = TestIds.BANNER
+import { bannerAdUnitId } from '@/constants/constants'
+import { useAdConsent } from '@/context/AdConsentContext'
 
 const AdsBanner = () => {
+  const {
+    consentResolved,
+    canRequestAds,
+  } = useAdConsent()
+
+  if (!consentResolved || !canRequestAds) {
+    return null
+  }
+
   return (
     <View style={{ alignItems: 'center' }}>
       <BannerAd
-        unitId={adUnitId}
+        unitId={bannerAdUnitId}
         size={BannerAdSize.FULL_BANNER}
         requestOptions={{
           requestNonPersonalizedAdsOnly: true,
         }}
-
-        // onAdLoaded={() => logToServer('BANNER LOADED')}
-        // onAdFailedToLoad={(e) =>
-        //   logToServer('BANNER ERROR ' + JSON.stringify(e))
-        // }
+        onAdFailedToLoad={(error) => {
+          console.warn('[AdMob] Banner failed to load', error)
+        }}
       />
     </View>
   )
